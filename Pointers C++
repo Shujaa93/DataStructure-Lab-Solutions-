@@ -1,1 +1,59 @@
 
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    float espressoPrice = 200.0, lattePrice = 250.0, cappuccinoPrice = 300.0;
+    int espressoQty, latteQty, cappuccinoQty;
+
+    float *pEspressoPrice = &espressoPrice;
+    float *pLattePrice = &lattePrice;
+    float *pCappuccinoPrice = &cappuccinoPrice;
+
+    int *pEspressoQty = &espressoQty;
+    int *pLatteQty = &latteQty;
+    int *pCappuccinoQty = &cappuccinoQty;
+
+    cout << "Enter quantity of Espresso: ";
+    cin >> *pEspressoQty;
+    cout << "Enter quantity of Latte: ";
+    cin >> *pLatteQty;
+    cout << "Enter quantity of Cappuccino: ";
+    cin >> *pCappuccinoQty;
+
+    float espressoTotal = (*pEspressoPrice) * (*pEspressoQty);
+    float latteTotal = (*pLattePrice) * (*pLatteQty);
+    float cappuccinoTotal = (*pCappuccinoPrice) * (*pCappuccinoQty);
+
+    float totalBill;
+    float *pTotalBill = &totalBill;
+    *pTotalBill = espressoTotal + latteTotal + cappuccinoTotal;
+
+    cout << "\n========== Café Bill ==========\n";
+    cout << left << setw(12) << "Item" 
+         << setw(6) << "Qty" 
+         << setw(8) << "Price" 
+         << "Subtotal\n";
+
+    cout << left << setw(12) << "Espresso" 
+         << setw(6) << *pEspressoQty 
+         << setw(8) << *pEspressoPrice 
+         << espressoTotal << endl;
+
+    cout << left << setw(12) << "Latte" 
+         << setw(6) << *pLatteQty 
+         << setw(8) << *pLattePrice 
+         << latteTotal << endl;
+
+    cout << left << setw(12) << "Cappuccino" 
+         << setw(6) << *pCappuccinoQty 
+         << setw(8) << *pCappuccinoPrice 
+         << cappuccinoTotal << endl;
+
+    cout << "-----------------------------------\n";
+    cout << "Total Bill: " << *pTotalBill << endl;
+    cout << "===================================\n";
+
+    return 0;
+}
