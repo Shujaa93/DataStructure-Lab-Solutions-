@@ -1,8 +1,9 @@
-                               Pointer-Based C++ Programs
+                                                         Pointer-Based C++ Programs
 
 This repository contains four C++ programs demonstrating the use of pointers, function pointers, and dynamic memory allocation in practical scenarios.
+Each program is based on a practical, real-world scenario that demonstrates how pointers can be used efficiently in programming.
 
-                             1️⃣ Clean Attendance Register
+                                                       1️⃣ Clean Attendance Register
 Scenario:
 You are designing an attendance register for a workshop.
 Highlights:
@@ -13,7 +14,7 @@ User can mark selected participants as present.
 Final attendance list is displayed and memory is released.
 
 
-                                2️⃣ Custom Score Tracker
+                                                       2️⃣ Custom Score Tracker
 Scenario:
 You are developing a sports score tracker for a local tournament.
 Highlights:
@@ -23,7 +24,7 @@ Scores are taken as input and displayed back.
 Memory is freed at the end to prevent leaks.
 
 
-                              3️⃣ Pointer Café – Coffee Billing System
+                                                       3️⃣ Pointer Café – Coffee Billing System
 
 Scenario:
 A café sells Espresso, Latte, and Cappuccino. Billing must be calculated using pointers.
@@ -34,8 +35,8 @@ Subtotal for each item and total bill computed using pointers only.
 Final bill displayed in tabular format.
 
  
-                              4️⃣ Secret Code Machine
-
+                                                      4️⃣ Secret Code Machine
+                  
 Scenario:
 A spy agency requires a secret code generator. The code is created by multiplying numbers from n down to 1 (factorial).
 Highlights:
