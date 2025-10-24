@@ -292,4 +292,6 @@ int main()
 	obj.insertAtEnd(50);
 
 	obj.display();
+
+	obj.Display();
 }
