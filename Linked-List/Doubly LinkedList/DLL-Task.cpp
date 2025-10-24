@@ -214,14 +214,14 @@ public:
 		cout << "     Prev Address        |   Data   |     Next Address |   Node Address\n";
 		cout << "------------------------------------------------------\n";
 
-		while (temp != nullptr) {
+		//while (temp != nullptr) {
 			cout << setw(20) << temp->prev   // shows prev pointer address
 				<< " | " << setw(7) << temp->data   // data field
 				<< " | " << setw(18) << temp->next  // shows next pointer address
 				<< " | " << setw(20) << temp
 				<< endl;
-			temp = temp->next;
-		}
+			//temp = temp->next;
+		//}
 		cout << "------------------------------------------------------\n";
 	}
 	void search(int value)
@@ -283,14 +283,13 @@ int main()
 	obj.insertAtBegin(5);
 	
 	obj.insertAtPos(4,20);
+
+	obj.deleteFB();
 	
+	obj.DisplayNode(obj.head->next);
+
+	obj.search(20);
+	obj.insertAtEnd(50);
+
 	obj.display();
-	
-	
-	
-	obj.Display();
-	
-	
-
-
 }
