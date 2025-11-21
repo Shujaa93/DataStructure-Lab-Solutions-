@@ -1,0 +1,61 @@
+                                       Dynamic Circular Queue 
+
+This project implements a Queue data structure using a dynamic (resizable) circular array in C++.
+The queue automatically grows when it becomes full and maintains efficient insertion and deletion operations.
+
+Features :
+Dynamic resizing (capacity doubles when full)
+Circular array indexing
+Efficient O(1) enqueue and dequeue
+Front and rear pointer logic
+Overflow and underflow handling
+Print function to display queue elements
+Fully object-oriented implementation
+
+How the Queue Works
+1. Dynamic Memory Allocation
+The queue uses a dynamic array that starts with a small capacity.
+Whenever it becomes full, the array size doubles using a resize operation.
+
+2. Circular Indexing
+Both front and rear positions move in a circular fashion using:
+(index + 1) % capacity
+This ensures no shifting of elements is required.
+
+3. Resizing Process :
+When the queue becomes full:
+A new array of double size is created
+All existing elements are copied in correct queue order
+The old array is deleted
+The front and rear indices are updated accordingly
+
+ Functions Implemented :
+1. enqueue(value)
+Adds a new element to the rear of the queue.
+Automatically resizes the array if needed.
+
+2. dequeue()
+Removes the front element using circular movement.
+Handles queue underflow safely.
+
+3. front()
+Returns the front element without deleting it.
+If empty, returns an error message.
+
+4. isEmpty()
+Checks whether the queue has any elements.
+
+5. size()
+Returns the total number of elements currently stored.
+
+6. print()
+Displays all elements from front to rear in correct order.
+
+Output Demonstration
+The program shows:
+Enqueueing values
+Dequeueing values
+Resizing in action
+Final queue traversal
+Underflow handling
+
