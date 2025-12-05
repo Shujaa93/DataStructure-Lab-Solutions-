@@ -132,7 +132,7 @@ public:
 
     // ---------------- REPORT ----------------
     void report() {
-        cout << "> COMMAND: CHRONOLOGICAL REPORT" << endl;
+        cout << "> CHRONOLOGICAL REPORT" << endl;
         cout << "-------------------------------" << endl;
         inOrder(root);
         cout << "-------------------------------" << endl;
@@ -152,30 +152,31 @@ int main() {
     cout << "Waiting for Time Stream Inputs..." << endl << endl;
 
     while (cin >> command) {
-        if (command == "INJECT" ||"inject") {
-            cin >> year;
-            getline(cin >> ws, eventName);
-            chronos.inject(year, eventName);
-        }
-        else if (command == "PARADOX" || "paradox") {
-            cin >> year;
-            chronos.resolveParadox(year);
-        }
-        else if (command == "SEARCH" || "search") {
-            cin >> year;
-            chronos.search(year);
-        }
-        else if (command == "REPORT" || "report") {
-            chronos.report();
-        }
-        else if (command == "EXIT" || "exit") break;
-        else {
-            cout << "> Unknown Command." << endl;
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-        cout << endl;
+    if (command == "INJECT" || command == "inject") {
+        cin >> year;
+        getline(cin >> ws, eventName);
+        chronos.inject(year, eventName);
     }
+    else if (command == "PARADOX" || command == "paradox") {
+        cin >> year;
+        chronos.resolveParadox(year);
+    }
+    else if (command == "SEARCH" || command == "search") {
+        cin >> year;
+        chronos.search(year);
+    }
+    else if (command == "REPORT" || command == "report") {
+        chronos.report();
+    }
+    else if (command == "EXIT" || command == "exit") break;
+    else {
+        cout << "> Unknown Command." << endl;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    cout << endl;
+}
+
     
     
 
