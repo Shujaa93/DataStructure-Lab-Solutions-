@@ -1,4 +1,4 @@
-Sorting Algorithms in C++ (DSA)
+# Sorting Algorithms in C++ (DSA)
 
 This repository contains implementations of **basic sorting algorithms** using **C++**.  
 It is created for **learning Data Structures & Algorithms (DSA)** and strengthening core programming concepts.
